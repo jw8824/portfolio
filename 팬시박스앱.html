@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/fancybox.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script src="lib/fancybox.umd.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script> -->
+    <script>
+        window.onload = () => {
+            Fancybox.bind('[data-fancybox]', {
+                // Your custom options
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div class="mobile_image">
+        <div class="show">
+            <a href="img/스타벅스-목업.png" data-fancybox="gallery"> <!-- 보이는 거 -->
+                <!-- <img src="img/스타벅스-목업.png"  alt="Sample image #1" /> -->
+                 <button>view</button>
+            </a>
+        </div>
+        <div class="hidden">
+            <a href="https://lipsum.app/id/61/1600x1200" data-fancybox="gallery"><!--  보이는 거 -->
+                <img src="https://lipsum.app/id/61/200x150"  alt="Sample image #2" />
+            </a>
+            <a href="https://lipsum.app/id/62/1600x1200" data-fancybox="gallery"> <!-- 보이는 거 -->
+                <img src="https://lipsum.app/id/62/120x80"  alt="Sample image #3" />
+            </a>
+        </div>
+    </div><!-- mobile_image -->
+</body>
+
+</html>

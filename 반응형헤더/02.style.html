@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이노션에스</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        window.onload = () => {
+            document.querySelector('.nav_btn').addEventListener('click', () => {
+                document.querySelector('.nav_mobile').classList.add('active');
+            })
+
+            document.querySelector('.close_btn').addEventListener('click', () => {
+                document.querySelector('.nav_mobile').classList.add('active');
+            })
+           
+        }
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="#">
+                    <img src="img/logo (1).svg" alt="">
+                </a>
+            </h1><!-- .logo end -->
+
+            <nav class="nav_pc pc">
+                <ul class="gnb">
+                    <li><a href="#">ABOUTS</a></li>
+                    <li><a href="#">WORKS</a></li>
+                    <li><a href="#">SOLUTIONS</a></li>
+                    <li><a href="#">INSIGHTS</a></li>
+                    <li><a href="#">CAREERS</a></li>
+                    <li><a href="#">CONTACTS</a></li>
+                </ul><!-- .gnb end -->
+            </nav><!-- .nav pc end -->
+
+            <ul class="lang pc">
+                <li><a href="">KOR</a></li>
+                <li><a href="">eng</a></li>
+            </ul><!-- .lang end -->
+
+            <button class="nav_btn mobile">
+                <img src="img/메뉴.svg" alt="메뉴보기">
+            </button><!-- .nav_btn end -->
+
+            <nav class="nav_mobile mobile">
+                <button class="close_btn">
+                    <img src="img/엑스.svg" alt="메뉴닫기">
+                </button>
+                <ul class="gnb">
+                    <li><a href="#">ABOUTS</a></li>
+                    <li><a href="#">WORKS</a></li>
+                    <li><a href="#">SOLUTIONS</a></li>
+                    <li><a href="#">INSIGHTS</a></li>
+                    <li><a href="#">CAREERS</a></li>
+                    <li><a href="#">CONTACTS</a></li>
+                </ul><!-- .gnb end -->
+
+                <ul class="lang">
+                <li><a href="">KOR</a></li>
+                <li><a href="">eng</a></li>
+                </ul><!-- .lang end -->
+
+            </nav><!-- .nav mobile end -->
+
+
+        </div><!-- .inner end -->
+    </header><!-- .header end -->
+
+    <main class="main">
+        <section class="main_visual">
+            <img src="img/배경.png" alt="We are Innovation">
+        </section>
+    </main>
+</body>
+
+</html>

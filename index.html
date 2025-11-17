@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="lib/fancybox.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <style>
+
+    </style>
+
+    <script src="lib/fancybox.umd.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script> -->
+    <script>
+        window.onload = () => {
+            // 1. Fancybox 자동 바인딩 (data-fancybox 속성을 가진 모든 A 태그에 적용)
+            Fancybox.bind('[data-fancybox]', {
+                // Your custom options
+            });
+
+            // 2. copy 섹션 및 mobile-design 섹션의 View 버튼 작동 로직
+            //    (tag-view-button 클래스 사용 및 data-gallery-id 활용)
+            const viewButtons = document.querySelectorAll('.tag-view-button'); // copy와 mobile-design 모두 이 클래스를 사용하도록 통일
+
+            viewButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const galleryId = button.getAttribute('data-gallery-id');
+                    const galleryContent = document.getElementById(galleryId);
+
+                    if (galleryContent) {
+                        const imageLinks = galleryContent.querySelectorAll('a');
+
+                        // Fancybox에 전달할 데이터 구조를 만듭니다.
+                        const fancyboxData = Array.from(imageLinks).map(link => ({
+                            src: link.href,
+                            type: 'image'
+                        }));
+
+                        if (fancyboxData.length > 0) {
+                            Fancybox.show(fancyboxData, {
+                                // 그룹 이름을 copy1-gallery, starbucks-gallery 등으로 설정
+                                group: galleryId.replace('GalleryContent', '-gallery')
+                            });
+                        }
+                    }
+                });
+            });
+            var graphicDesignSwiper = new Swiper(".graphic-design .swiper-mySwiper", {
+                effect: "cards",
+                grabCursor: true,
+            });
+
+            gsap.set(".introAnim", { position: "absolute", left: 0, top: 0, width: "100%", height: "100%", opacity: 1 })
+            gsap.set(".introAnimDevice", { x: 65, y: 65 })
+            gsap.set(".tablet, .laptop, .desktop, .ooh", { opacity: 0 })
+
+
+            let tl = gsap.timeline({
+                defaults: { duration: 0.67, ease: "expo.inOut" }, scrollTrigger: {
+                    trigger: "#scrollDist",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 0.5,
+                    snap: 'labels',
+                    // snap: {
+                    //     snapTo: "labels", // snap to the closest label in the timeline
+                    //     duration: {min: 0.1, max: 0.3}, // the snap animation should be at least 0.3 seconds, but no more than 1.3 sec (determined by velocity)
+                    //     // ease: "expo.inOut" // the ease of the snap animation ("power3" by default)
+                    //   }
+                }
+            })
+        }
+
+    </script>
+
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="#">web portfolio</a>
+            </h1><!-- .web portfolio end -->
+
+
+            <nav class="nav">
+                <ul class="gnb">
+                    <li><a href="#">intro</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">web design</a></li>
+                    <li><a href="#">graphic design</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul><!-- .gnb end -->
+            </nav><!-- .nav end -->
+
+        </div><!-- inner end -->
+    </header><!-- .header end -->
+
+    <main class="main-content">
+        <div class="main-text">
+            <h2>WEB PORTFOLIO</h2>
+        </div><!-- .text end -->
+
+        <section class="about">
+            <div class="inner">
+                <h2 class="section-title">About</h2>
+                <div class="about-content">
+                    <div class="profile-photo">
+                        <img src="img/7342052.jpg" alt="">
+                    </div><!-- .profile-photo end -->
+
+                    <div class="profile-details">
+                        <div class="profile-info">
+                            <h3>PROFILE</h3>
+                            <ul>
+                                <li><span class="label">NAME</span><span class="data">최지우</span></li>
+                                <li><span class="label">BIRTH</span><span class="data">2005.07.19</span></li>
+                                <li><span class="label">PHONE</span><span class="data">010-8432-8824</span></li>
+                                <li><span class="label">E-MAIL</span><span class="data">jw8824@naver.com</span></li>
+                            </ul>
+                        </div><!-- .profile-info end -->
+
+                        <div class="education-info">
+                            <h3>EDUCATION</h3>
+                            <ul>
+                                <li><span class="year">2025</span><span class="detail">그린컴퓨터아카데미 UI/UX 반응형 웹디자인 & 웹퍼블리셔
+                                        양성과정
+                                        수료</span></li>
+                                <li><span class="year">2023</span><span class="detail">연제고등학교 졸업</span></li>
+                            </ul>
+                        </div><!-- .education-info end -->
+
+                        <div class="skills-info">
+                            <h3>SKILLS</h3>
+                            <div class="skills-icons">
+                                <img src="img/포토샵.svg" alt="포토샵">
+                                <img src="img/일러스트.svg" alt="일러스트">
+                                <img src="img/피그마.svg" alt="피그마">
+                                <img src="img/js.svg" alt="js">
+                                <img src="img/깃허브.svg" alt="깃허브">
+                                <img src="img/icons8-제이쿼리-48 1.svg" alt="제이쿼리">
+                                <img src="img/비주얼스튜디오 코드.svg" alt="">
+                                <img src="img/css.svg" alt="css">
+                                <img src="img/html.svg" alt="html">
+                            </div><!-- .skills-icons end -->
+                        </div><!-- .skills-info end -->
+
+
+                    </div><!-- .profile-details end -->
+                </div><!-- .about-content end -->
+            </div><!-- .inner end -->
+        </section><!-- .about end -->
+
+
+
+        <section class="web-design">
+            <div class="inner">
+                <h2 class="section-title">Web Design</h2>
+
+                <div class="fantagio">
+                    <div class="mockp">
+                        <img src="img/판타지오 웹사이트 목업.png" alt="판타지오 웹사이트 목업">
+                    </div><!-- .mockup end -->
+
+                    <div class="project-ex">
+                        <h3>FANTAGIO</h3>
+                        <p>트렌드에 치우치지 않고 깔끔한 디자인으로 제작했지만, 소속사 특유의 분위기를 살리는 데 어려움을 겪었습니다.</p>
+
+                        <div class="spec">
+                            <p>
+                                <strong>사용언어</strong>: HTML, CSS <br>
+                                <strong>사용프로그램</strong>: Figma, VIsual Studio Code <br>
+                                <strong>기여도</strong>: 기획, 디자인, 퍼블리싱 100% <br>
+                                <strong>제작 페이지</strong>: 메인 페이지
+                            </p>
+                        </div><!-- .spec end -->
+
+
+                        <div class="tags-top">
+                            <a href="https://file.notion.so/f/f/1d2d2453-554e-8137-95dc-0003cb54d07f/9589054c-eccd-4817-aed0-5532155f1084/%EC%B5%9C%EC%A7%80%EC%9A%B0_%EB%94%94%EC%9E%90%EC%9D%B8%EA%B5%AC%EC%84%B1%EC%9A%94%EC%86%8C%EC%9D%91%EC%9A%A9.pdf?table=block&id=2a8d2453-554e-80fe-8c89-f11fd1c4b682&spaceId=1d2d2453-554e-8137-95dc-0003cb54d07f&expirationTimestamp=1762905600000&signature=lbr0u-ZVaOFpYN79DHCmzJD9R_tctwJ5vKsqfK_z7P0&downloadName=%EC%B5%9C%EC%A7%80%EC%9A%B0_%EB%94%94%EC%9E%90%EC%9D%B8%EA%B5%AC%EC%84%B1%EC%9A%94%EC%86%8C%EC%9D%91%EC%9A%A9.pdf"
+                                class="tag-process">process</a> <!-- 각자 링크는 # 안에 넣기 -->
+                            <a href="#" class="tag-figma">figma</a>
+                            <a href="#" class="tag-website">website</a>
+                        </div><!-- .tags-top end -->
+
+                        <div class="tags-bottom">
+                            <span class="tags-bottom">#web</span>
+                            <span class="tags-bottom">#tablet</span>
+                            <span class="tags-bottom">#prototype</span>
+                            <span class="tags-bottom">#redesign</span>
+                        </div><!-- .tags-bottom -->
+                    </div><!-- .project-ex end -->
+                </div><!-- .fantagio end -->
+
+
+                <div class="LG">
+                    <div class="mockp">
+                        <img src="img/엘지전자 웹사이트 목업.png" alt="엘지전자  웹사이트 목업">
+                    </div><!-- .mockup end -->
+                    <div class="project-ex">
+                        <h3>LG 전자 </h3>
+                        <p>UI 효율성을 높였으나 브랜드 분위기 유지의 어려움을 겪으며 브랜드 경험의 중요성을 깨달았습니다.</p>
+
+                        <div class="spec">
+                            <p>
+                                <strong>사용프로그램</strong>: Figma <br>
+                                <strong>기여도</strong>: 기획, 디자인 100% <br>
+                                <strong>제작 페이지</strong>: 메인 페이지
+                            </p>
+                        </div><!-- .spec end -->
+
+
+                        <div class="tags-top">
+                            <a href="#" class="tag-process">process</a> <!-- 각자 링크는 # 안에 넣기 -->
+                            <a href="#" class="tag-figma">figma</a>
+                            <a href="#" class="tag-website">website</a>
+                        </div><!-- .tags-top end -->
+
+                        <div class="tags-bottom">
+                            <span class="tags-bottom">#web</span>
+                            <span class="tags-bottom">#prototype</span>
+                            <span class="tags-bottom">#redesign</span>
+                        </div><!-- .tags-bottom -->
+                    </div><!-- .project-ex end -->
+                </div><!-- .LG end -->
+
+
+                <div class="busan">
+                    <div class="mockp">
+                        <img src="img/부산관광공사 웹사이트 목업.png" alt="판타지오 웹사이트 목업">
+                    </div><!-- .mockup end -->
+                    <div class="project-ex">
+                        <h3>부산관광공사</h3>
+                        <p>사용자 중심 디자인과 콘텐츠 차별화를 목표로 했지만, 정보성보다 사업 소개 위주의 구조로 필요한 정보만 선별하기 어려웠습니다.</p>
+
+                        <div class="spec">
+                            <p>
+                                <strong>사용프로그램</strong>: Figma <br>
+                                <strong>기여도</strong>: 기획, 디자인 100% <br>
+                                <strong>제작 페이지</strong>: 메인 페이지
+                            </p>
+                        </div><!-- .spec end -->
+
+
+                        <div class="tags-top">
+                            <a href="#" class="tag-process">process</a> <!-- 각자 링크는 # 안에 넣기 -->
+                            <a href="https://www.figma.com/proto/79UQ8LQ3oepBO6Od2yJNnL/%EB%B6%80%EC%82%B0%EA%B4%80%EA%B4%91%EA%B3%B5%EC%82%AC?node-id=27-156&t=qr9zsNP4WdXFd9Uy-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=27%3A156"
+                                class="tag-figma" target="_blank" rel="noopener noreferrer">figma</a>
+                        </div><!-- .tags-top end -->
+
+                        <div class="tags-bottom">
+                            <span class="tags-bottom">#web</span>
+                            <span class="tags-bottom">#prototype</span>
+                            <span class="tags-bottom">#redesign</span>
+                        </div><!-- .tags-bottom -->
+                    </div><!-- .project-ex end -->
+                </div><!-- .busan end -->
+
+
+
+            </div><!-- .inner end -->
+        </section><!-- .web-design end -->
+
+        <div class="mobile-design">
+            <div class="nuse">
+                <div class="mockp">
+                    <img src="img/누즈 목업.png" alt="누즈 웹사이트 목업">
+                </div><!-- .mockup end -->
+
+                <div class="texts">
+                    <h3>NUSE</h3>
+                    <p>불필요한 요소를 줄여 명확한 정보 전달을 목표로 했지만, 단순화 과정에서 전달력이 떨어지는 한계를 느꼈습니다.</p>
+                    <div class="spec">
+                        <p>
+                            <strong>사용언어</strong>: HTML, CSS <br>
+                            <strong>사용프로그램</strong>: Figma, Visual Studio Code <br>
+                            <strong>기여도</strong>: 기획, 디자인, 퍼블리싱 <br>
+                            <strong>제작 페이지</strong>: 메인, 서지 페이지
+                        </p>
+                    </div><!-- .spec end -->
+
+                    <div class="tags-top">
+                        <a href="#" class="tag-process">process</a> <!-- 각자 링크는 # 안에 넣기 -->
+                        <a href="#" class="tag-figma">figma</a>
+                        <a href="img/누즈_메인.png" data-fancybox="gallery-nuse" class="tag-view-button">
+                            <div>View</div>
+                        </a>
+                        <div id="nuseGalleryContent" style="display:none;">
+                            <a href="img/누즈_서브.png" data-fancybox="gallery-nuse"></a>
+                        </div>
+
+                    </div><!-- .tags-top end -->
+
+                    <div class="tags-bottom">
+                        <span class="tags-bottom">#mobile</span>
+                        <span class="tags-bottom">#prototype</span>
+                        <span class="tags-bottom">#redesign</span>
+                    </div><!-- .tags-bottom -->
+
+                </div><!-- .texts end -->
+
+
+            </div><!-- .nuse end -->
+
+        </div><!-- .nuse end -->
+
+        <div class="starbucks">
+            <div class="mockp">
+                <img src="img/스타벅스-목업.png" alt="스타벅스 웹사이트 목업">
+            </div><!-- .mockup end -->
+            <div class="texts">
+                <h3>STARBUCKS</h3>
+                <p>진입장벽을 낮추기 위해 핵심 기능 중심으로 화면을 구성했으나 정보 누락의 한계를 발견했고 사용 편의성과 정보 전달의 균형이 중요함을 알게 되었습니다.
+                </p>
+
+                <div class="spec">
+                    <p>
+                        <strong>사용프로그램</strong>: Photoshop <br>
+                        <strong>기여도</strong>: 기획, 디자인 100% <br>
+                        <strong>제작 페이지</strong>: 메인 페이지, 서브 페이지
+                    </p>
+                </div><!-- .spec end -->
+
+                <div class="tags-top">
+                    <a href="#" class="tag-process">process</a> <!-- 각자 링크는 # 안에 넣기 -->
+                    <a href="#" class="tag-figma">figma</a>
+                    <a href="img/스타벅스-목업2.png" data-fancybox="gallery" class="tag-view">
+                        <div>View</div>
+                    </a>
+
+                    <div id="starbucksGalleryContent">
+                        <div style="display:none;">
+                            <a href="img/스타벅스-목업3.png" data-fancybox="gallery"></a>
+                            <a href="img/스타벅스-목업4.png" data-fancybox="gallery"></a>
+                        </div>
+                    </div>
+
+
+                </div><!-- .tags-top end -->
+
+                <div class="tags-bottom">
+                    <span class="tags-bottom">#mobile</span>
+                    <span class="tags-bottom">#photoshop</span>
+                    <span class="tags-bottom">#redesign</span>
+                </div><!-- .tags-bottom -->
+            </div><!-- .text end -->
+
+        </div><!-- .starbucks end -->
+        </div><!-- .mobile-design end -->
+
+
+        <section class="graphic-design">
+            <div class="inner">
+                <h2 class="section-title">Graphic Design</h2>
+
+                <div class="swiper swiper-mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/인스타피드1.png" alt="피드1"></div>
+                        <div class="swiper-slide"><img src="img/인스타피드2.png" alt="피드2"></div>
+                        <div class="swiper-slide"><img src="img/인스타피드3.png" alt="피드3"></div>
+                        <div class="swiper-slide"><img src="img/인스타피드4.png" alt="피드4"></div>
+                        <div class="swiper-slide"><img src="img/인스타피드5.png" alt="피드5"></div>
+                    </div><!-- .swiper-wrapper end -->
+                </div><!-- .swiper swiper-mySwiper end -->
+
+
+            </div><!-- .inner end -->
+        </section><!-- .graphic-design end -->
+
+
+        <!-- copy 영역 -->
+        <section class="copy">
+            <div class="inner">
+                <div class="copy-track">
+                    <div class="copy1">
+                        <h2>시골청년_절임배추</h2>
+
+                        <div class="tag-group">
+                            <span class="tag-item">#절임배추</span>
+                            <span class="tag-item">#90일 정성</span>
+                            <span class="tag-item">#해남</span>
+                        </div><!-- .tag-group end -->
+
+                        <div class="tag-button-group">
+                            <a href="#" class="tag-view-button" data-gallery-id="copy1GalleryContent">view</a>
+                        </div><!-- .button-group end -->
+
+                        <div class="image">
+                            <img src="img/모작1.png" alt="">
+                        </div><!-- .image end -->
+
+                        <div id="copy1GalleryContent" style="display:none;">
+                            <a data-fancybox="copy1-gallery" href="img/절임배추 상세-1.jpg"></a>
+                        </div><!-- .copy1GalleryContent end -->
+                    </div> <!-- .copy1 end -->
+
+                    <div class="copy2">
+                        <h2>네이블 오렌지</h2>
+                        <div class="tag-group">
+                            <span class="tag-item">#퓨오스펙</span>
+                            <span class="tag-item">#블랙라벨</span>
+                            <span class="tag-item">#고당도</span>
+                            <span class="tag-item">#프리미엄</span>
+                        </div><!-- .tag-group end -->
+
+                        <div class="tag-button-group">
+                            <a href="#" class="tag-view-button" data-gallery-id="copy2GalleryContent">view</a>
+                        </div><!-- .button-group end -->
+
+                        <div class="image">
+                            <img src="img/모작2.png" alt="">
+                        </div><!-- .image end -->
+
+                        <div id="copy2GalleryContent" style="display:none;">
+                            <a href="img/네이블 오렌지.jpg" data-fancybox="copy2-gallery"></a>
+                        </div>
+                    </div> <!-- .copy2 end -->
+
+                    <div class="copy3">
+                        <h2>2025 EVENT RING</h2>
+                        <div class="tag-group">
+                            <span class="tag-item">#illustrator</span>
+                            <span class="tag-item">#20205</span>
+                            <span class="tag-item">#event</span>
+                            <span class="tag-item">#ring</span>
+                        </div><!-- .tag-group end -->
+
+                        <div class="tag-button-group">
+                            <a href="#" class="tag-view-button" data-gallery-id="copy3GalleryContent">view</a>
+                        </div><!-- .button-group end -->
+
+                        <div class="image">
+                            <img src="img/모작3.png" alt="">
+                        </div><!-- .image end -->
+
+                        <div id="copy3GalleryContent" style="display:none;">
+                            <a href="img/디자인-2.png" data-fancybox="copy3-gallery"></a>
+                        </div>
+                    </div> <!-- .copy3 end -->
+
+                    <div class="copy4">
+                        <h2>29CM</h2>
+                        <div class="tag-group">
+                            <span class="tag-item">#인테리어</span>
+                            <span class="tag-item">#취향</span>
+                            <span class="tag-item">#당신의 집</span>
+                        </div><!-- .tag-group end -->
+                        <div class="tag-button-group">
+                            <a href="#" class="tag-view-button" data-gallery-id="copy4GalleryContent">view</a>
+                        </div><!-- .button-group end -->
+
+                        <div class="image">
+                            <img src="img/모작4.png" alt="">
+                        </div><!-- .image end -->
+
+                        <div id="copy4GalleryContent" style="display:none;">
+                            <a href="img/gif-포폴제출용.gif" data-fancybox="copy4-gallery"></a>
+                        </div>
+                    </div> <!-- .copy4 end -->
+
+
+
+                    <div class="copy5">
+                        <h2>카카오페이</h2>
+                        <div class="tag-group">
+                            <span class="tag-item">#간편결제</span>
+                            <span class="tag-item">#간편송금</span>
+                            <span class="tag-item">#멤버십</span>
+                        </div><!-- .tag-group end -->
+                        <div class="tag-button-group">
+                            <a href="#" class="tag-view-button" data-gallery-id="copy5GalleryContent">view</a>
+                        </div><!-- .button-group end -->
+
+                        <div class="image">
+                            <img src="img/모작5.png" alt="">
+                        </div><!-- .image end -->
+
+                        <div id="copy5GalleryContent" style="display:none;">
+                            <a data-fancybox="copy5-gallery" href="img/카카오페이-1.png"></a>
+                            <a data-fancybox="copy5-gallery" href="img/카카오페이-2.png"></a>
+                            <a data-fancybox="copy5-gallery" href="img/카카오페이-3.png"></a>
+                        </div>
+                    </div> <!-- .copy5 end -->
+
+                </div><!-- .copy-track end -->
+            </div><!-- inner end -->
+        </section><!-- .copy end -->
+
+        <section class="contact">
+            <div class="inner">
+                <h2 class="section-title">contact</h2>
+
+                <div class="contact-box">
+                    <div class="contact-detail">
+                        <p class="phone">
+                            <span class="label">Phone</span>
+                            <span class="data">010-8432-8824</span>
+                        </p>
+
+                        <p class="email">
+                            <span class="label">E-mail</span>
+                            <span class="data">jw884@naver.com</span>
+                        </p>
+                    </div><!-- .contact-detail end -->
+
+                    <div class="buttons">
+                        <a href="#" class="button">포트폴리오</a>
+                        <a href="https://github.com/jw8824" class="button" target="_blank" title="GitHub">GitHub</a>
+                    </div><!-- .buttons end -->
+                </div><!-- .contact-box end -->
+            </div><!-- .inner end -->
+        </section><!-- .contact end -->
+    </main><!-- .main end -->
+
+    <footer class="footer">
+        <div class="inner">
+            <p class="copy-notice">
+                * 본 사이트는 상업 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.
+            </p>
+
+            <P class="copyright">
+                © 2025 Choi JIWOO. All Rights Reserved.
+            </P>
+        </div><!-- inner end -->
+    </footer><!-- .footer end -->
+
+</body>
+
+</html>
