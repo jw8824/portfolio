@@ -13,10 +13,8 @@ body {
     height: 90px;
     width: 100%;
     position: fixed;
-    border-top: 2px solid #828282;
-    border-bottom: 2px solid #828282;
-    background: #F8F8F8;
-    background-color: rgba(245, 245, 245, 0.562);
+    background: #032D68;
+    background-color: #032D68;
     backdrop-filter: blur(2px);
     z-index: 1000;
 }
@@ -29,6 +27,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+    color: #ffffff;
 
 }
 
@@ -75,8 +74,8 @@ body {
     text-align: center;
     font-size: 48px;
     font-weight: bold;
-    border-top: 2px solid #828282;
-    border-bottom: 2px solid #828282;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
     padding: 30px 0;
 }
 
@@ -105,7 +104,11 @@ body {
 .about .inner .about-content .profile-details {
     width: 50%;
     padding: 40px;
-    border-left: 2px solid #828282;
+    border-left: 2px solid #ffffff;
+}
+
+.profile-details {
+    color: #ffffff;
 }
 
 .profile-info,
@@ -200,6 +203,27 @@ body {
     padding-top: 10px;
 }
 
+.profile-info h3,
+.education-info h3 {
+    color: #ffffff;
+}
+
+.profile-info .label {
+    color: #ffffff;
+}
+
+.profile-info .data {
+    color: #ffffff;
+}
+
+
+.education-info .year {
+    color: #ffffff;
+}
+
+.education-info .detail {
+    color: #ffffff;
+}
 
 
 
@@ -215,9 +239,10 @@ body {
     margin-bottom: 20px;
     padding-top: 30px;
     position: sticky;
-    border-top: 2px solid #828282;
-    border-bottom: 2px solid #828282;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
     padding: 30px 0;
+    color: #ffffff;
 }
 
 
@@ -279,9 +304,10 @@ body {
     font-weight: 700;
     text-align: center;
     margin-bottom: 60px;
-    border-top: 2px solid #828282;
-    border-bottom: 2px solid #828282;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
     padding: 30px 0;
+    color: #ffffff;
 }
 
 .mobile-design .starbucks {
@@ -481,6 +507,7 @@ body {
 
 .graphic-design .inner {
     padding-bottom: 100px;
+    background-color: #F5F5F5;
 }
 
 .graphic-design .inner .section-title {
@@ -529,18 +556,21 @@ body {
 
 
 /* copy 영역 */
-.copy .inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 50px
-}
+
 
 .copy {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: 100px
+    padding-bottom: 100px;
+    background-color: #f5f5f5;
+}
+
+.copy .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 50px
 }
 
 .copy1,
@@ -695,6 +725,7 @@ body {
 .contact {
     text-align: center;
     margin-top: 150px;
+    background-color: #f5f5f5;
 }
 
 .contact .section-title {
@@ -776,6 +807,7 @@ body {
 
 .footer {
     text-align: center;
+    background-color: #F5F5F5;
 }
 
 .footer .inner {
