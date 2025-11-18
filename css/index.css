@@ -1,12 +1,12 @@
 @charset "utf-8";
 @import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 
 body {
     background-color: #032D68;
     min-width: 1400px;
     margin: 0 auto;
-
 }
 
 .header {
@@ -33,7 +33,6 @@ body {
 
 .logo a {
     font-size: 28px;
-
 }
 
 .nav .gnb {
@@ -60,6 +59,12 @@ body {
     align-items: center;
 }
 
+.main-text h2 {
+    color: #ffffff;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+}
+
 .about {}
 
 .about .inner {
@@ -77,6 +82,7 @@ body {
     border-top: 2px solid #ffffff;
     border-bottom: 2px solid #ffffff;
     padding: 30px 0;
+    color: #ffffff;
 }
 
 .about .inner .about-content {
@@ -234,7 +240,6 @@ body {
 
 .web-design .section-title {
     font-size: 2.5rem;
-    font-weight: 700;
     text-align: center;
     margin-bottom: 20px;
     padding-top: 30px;
@@ -243,6 +248,8 @@ body {
     border-bottom: 2px solid #ffffff;
     padding: 30px 0;
     color: #ffffff;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
 }
 
 
@@ -294,7 +301,7 @@ body {
     margin: 0 auto;
     gap: 40px;
     padding-bottom: 100px;
-    display: block;
+    display: flex;
 
 }
 
@@ -311,17 +318,18 @@ body {
 }
 
 .mobile-design .starbucks {
-    border-left: 2px solid #828282;
+    border-left: 2px solid #ffffff57;
 }
 
 .mobile-design .nuse,
 .mobile-design .starbucks {
-    width: calc(100% - 20px);
+    width: calc(50% - 20px);
     height: auto;
     padding: 30px;
     display: flex;
     gap: 45px;
     align-items: center;
+    color: #ffffff;
 }
 
 .mobile-design .nuse .mockp,
@@ -342,6 +350,7 @@ body {
 .mobile-design .nuse .texts,
 .mobile-design .starbucks .texts {
     width: 400px;
+    color: #ffffff;
 }
 
 .mobile-design .nuse h3,
@@ -512,15 +521,18 @@ body {
 
 .graphic-design .inner .section-title {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
     padding-top: 30px;
     position: sticky;
-    border-top: 2px solid #828282;
-    border-bottom: 2px solid #828282;
+    border-top: 3px solid #828282;
+    border-bottom: 3px solid #828282;
     padding: 30px 0;
     margin-bottom: 150px;
+    margin-top: 50px;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
 }
 
 .graphic-design .inner .swiper-mySwiper {
@@ -672,6 +684,16 @@ body {
     margin-top: 50px;
 }
 
+.copy3 h2 {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+}
+
+.copy4 h2 {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+}
+
 /* 햇시태그 그룹 스타일 */
 .tag-group {
     display: flex;
@@ -689,12 +711,17 @@ body {
     padding: 10px 20px;
     border-radius: 3px;
     background-color: #f7f7f7;
-    border: 1px solid #e0e0e0;
-    color: #333;
+    /*     border: 2px solid #ebebebcc; */
+    color: #303030c7;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: bold;
 }
 
+.copy3 .tag-item {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    color: #303030c7;
+}
 
 /* View 버튼 그룹 */
 .tag-button-group {
@@ -731,7 +758,8 @@ body {
 .contact .section-title {
     font-size: 50px;
     margin-bottom: 50px;
-    font-weight: 500;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
 }
 
 .contact .inner {
