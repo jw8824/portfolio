@@ -1,0 +1,55 @@
+main.js 파일  내용
+
+window.onload = () => {
+
+    Fancybox.bind('[data-fancybox]', {
+        // Your custom options
+    });
+    
+
+    const starbucksButton = document.getElementById('openStarbucksGallery');
+    const starbucksGallery = document.getElementById('starbucksGalleryContent');
+
+    if (starbucksButton && starbucksGallery) {
+        starbucksButton.addEventListener('click', () => {
+            const imageLinks = starbucksGallery.querySelectorAll('a');
+
+            const fancyboxData = Array.from(imageLinks).map(link => ({
+                src: link.href,
+                type: 'image'
+            }));
+
+            if (fancyboxData.length > 0) {
+                Fancybox.show(fancyboxData, {
+                    group: 'starbucks-manual'
+                });
+            }
+        });
+    }
+
+    // 3. GRAPHIC DESIGN 섹션 Swiper 초기화
+    const swiper = new Swiper('.insta-mockup-slider', {
+        grabCursor: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        breakpoints: {
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 0
+            },
+            480: {
+                slidesPerView: 1,
+                spaceBetween: 0
+            }
+        }
+    });
+}
