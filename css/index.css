@@ -243,7 +243,7 @@ body {
     text-align: center;
     margin-bottom: 20px;
     padding-top: 30px;
-    position: sticky;
+    /* position: sticky; */
     border-top: 2px solid #ffffff;
     border-bottom: 2px solid #ffffff;
     padding: 30px 0;
@@ -252,6 +252,9 @@ body {
     font-weight: 400;
 }
 
+.web-design .project-ex h3 {
+    color: #ffffff;
+}
 
 .web-design .fantagio,
 .web-design .LG,
@@ -265,30 +268,30 @@ body {
     margin: 150px auto 50px;
     /* 상하 간격 및 중앙 정렬 */
     padding: 60px;
-    background-color: #fff;
-    border-radius: 15px;
+   /*  background-color: #fff; */
+    /* border-radius: 15px; */
     /* border: 2.5px solid #626974; */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.288);
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.288); */
     /* 부드러운 그림자 */
     display: flex;
     gap: 40px;
     align-items: center;
-
+    color: #ffffff;
 }
 
 .web-design .fantagio {
-    position: sticky;
+    /* position: sticky; */
     top: 100px;
 }
 
 .web-design .LG {
     flex-direction: row-reverse;
-    position: sticky;
+    /* position: sticky; */
     top: 150px;
 }
 
 .web-design .busan {
-    position: sticky;
+    /* position: sticky; */
     top: 200px;
 }
 
