@@ -257,7 +257,8 @@ body {
     font-weight: 400;
 }
 
-.web-design .project-ex h3 {
+
+#web-design .project-ex h3 {
     color: #ffffff;
 }
 
@@ -483,7 +484,7 @@ body {
     border: 1px solid #ccc;
 }
 
-.tags-top .tag-figma {
+.tags-top .tag-prototype {
     background-color: #ffffff;
     color: #333;
     border: 1px solid #ccc
@@ -511,11 +512,11 @@ body {
 
 .tags-bottom span {
     font-size: 14px;
-    color: #666;
+    color: #b1b1b1;
     padding: 10px 20px;
-    background-color: #f7f7f7;
+    /* background-color: #f7f7f7;
     border-radius: 3px;
-    border: 1px solid #eee;
+    border: 1px solid #eee; */
 }
 
 
