@@ -274,7 +274,7 @@ body {
     margin: 150px auto 50px;
     /* 상하 간격 및 중앙 정렬 */
     padding: 60px;
-   /*  background-color: #fff; */
+    /*  background-color: #fff; */
     /* border-radius: 15px; */
     /* border: 2.5px solid #626974; */
     /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.288); */
@@ -341,9 +341,24 @@ body {
     color: #ffffff;
 }
 
+/* .mobile-design .nuse .mockp,
+.mobile-design .starbucks .mockp {
+    width: 40%;
+} */
+
 .mobile-design .nuse .mockp,
 .mobile-design .starbucks .mockp {
     width: 40%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+}
+
+.mobile-design .nuse .mockp img,
+.mobile-design .starbucks .mockp img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 
