@@ -496,8 +496,8 @@ body {
 
 .tags-top a {
     padding: 13px 35px;
-    border-radius: 5px;
-    font-size: 20px;
+    /* border-radius: 5px; */
+    font-size: 23px;
     font-weight: 500;
 
 }
@@ -506,24 +506,30 @@ body {
     background-color: #ffffff;
     color: #333;
     border: 1px solid #ccc;
+    border-radius: 20px;
 }
 
 .tags-top .tag-prototype {
     background-color: #ffffff;
     color: #333;
-    border: 1px solid #ccc
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    
 }
 
 .tags-top .tag-website {
     background-color: #ffffff;
     color: #333;
-    border: 1px solid #ccc
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    
 }
 
 .tags-top .tag-view {
     background-color: #ffffff;
     color: #333;
     border: 1px solid #ccc;
+    border-radius: 20px;
 }
 
 /* 태그 스타일 */
