@@ -114,6 +114,7 @@ body {
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.85);
 }
+
 .about .inner .about-content .profile-photo img {
     width: 100%;
     height: 100%;
@@ -249,8 +250,6 @@ body {
 
 /* 웹 디자인 스타일  */
 
-.web-design {}
-
 
 .web-design .section-title {
     font-size: 2.5rem;
@@ -315,13 +314,20 @@ body {
 
 .mobile-design {
     max-width: 1400px;
-    padding: 150px 0;
+    padding: 150px 0 100px;
     margin: 0 auto;
-    gap: 40px;
+    /* gap: 40px;
     padding-bottom: 100px;
-    display: flex;
+    display: flex; */
 
 }
+
+.mobile-projects {
+    display: flex;
+    gap: 120px;
+}
+
+/* 카드 내부 디자인 */
 
 .mobile-design .section-title {
     width: 100%;
@@ -350,21 +356,16 @@ body {
     color: #ffffff;
 }
 
-/* .mobile-design .nuse .mockp,
-.mobile-design .starbucks .mockp {
-    width: 40%;
-} */
-
-.mobile-design .nuse .mockp,
-.mobile-design .starbucks .mockp {
+.mobile-design .nuse .mockup,
+.mobile-design .starbucks .mockup {
     width: 40%;
     height: 350px;
     display: flex;
     align-items: center;
 }
 
-.mobile-design .nuse .mockp img,
-.mobile-design .starbucks .mockp img {
+.mobile-design .nuse .mockup img,
+.mobile-design .starbucks .mockup img {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -372,8 +373,8 @@ body {
 
 
 
-.mobile-design .nuse .mockp img,
-.mobile-design .starbucks .mockp img {
+.mobile-design .nuse .mockup img,
+.mobile-design .starbucks .mockup img {
     width: 100%;
     height: auto;
     object-fit: contain;
@@ -413,18 +414,20 @@ body {
     margin-bottom: 10px;
 }
 
-.mobile-design .texts .tags-top {
+/* .mobile-design .texts .tags-top {
     display: flex;
     gap: 15px;
     margin-top: 15px;
     margin-bottom: 20px;
-}
+} */
 
 .tags-top {
+    max-width: 420px;
     display: flex;
     gap: 10px;
     margin-top: 5px;
     margin-bottom: 20px;
+    margin-left: auto;
 }
 
 .tags-top a {
@@ -487,18 +490,26 @@ body {
 
 /* 버튼-프로세스,피그마,웹사이트 스타일 */
 
-.tags-top {
+/* .tags-top {
     display: flex;
     gap: 10px;
     margin-bottom: 15px;
 
+} */
+
+.tags-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .tags-top a {
     padding: 13px 35px;
     /* border-radius: 5px; */
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 500;
+    text-align: center;
+    flex: 0 0 auto;
 
 }
 
@@ -514,7 +525,7 @@ body {
     color: #333;
     border: 1px solid #ccc;
     border-radius: 20px;
-    
+
 }
 
 .tags-top .tag-website {
@@ -522,7 +533,7 @@ body {
     color: #333;
     border: 1px solid #ccc;
     border-radius: 20px;
-    
+
 }
 
 .tags-top .tag-view {
@@ -576,8 +587,6 @@ body {
 
 .graphic-design .inner .swiper-mySwiper {
     width: 375px;
-
-
 }
 
 .graphic-design .inner .swiper-mySwiper .swiper-wrapper {}
@@ -599,10 +608,6 @@ body {
     object-fit: cover;
     border-radius: 18px;
 }
-
-
-
-
 
 
 
@@ -651,25 +656,6 @@ body {
 }
 
 
-/* .copy1 h2,
-.copy1 .tags,
-.copy1 button,
-.copy2 h2,
-.copy2 .tags,
-.copy2 button,
-.copy3 h2,
-.copy3 .tags,
-.copy3 button,
-.copy4 h2,
-.copy4 .tags,
-.copy4 button,
-.copy5 h2,
-.copy5 .tags,
-.copy5 button {
-    width: auto;
-    margin-bottom: 5px;
-} */
-
 .copy1 .image img,
 .copy2 .image img,
 .copy3 .image img,
@@ -680,19 +666,6 @@ body {
     object-fit: cover;
 }
 
-/* .copy1 .image,
-.copy2 .image {
-    width: 312px;
-    height: 617px;
-}
-
-.copy3, .image
-.copy4, .image
-.copy5 .image {
-    width: 312px;
-    height: 619px;
-} */
-
 .copy1 .image,
 .copy2 .image,
 .copy3 .image,
@@ -700,7 +673,6 @@ body {
 .copy5 .image {
     width: 312px;
     height: 617px;
-    /* 높이를 617px로 통일 */
 }
 
 /* 그2행 3열 효과 주기 영역 */
@@ -733,14 +705,14 @@ body {
     font-weight: 400;
 }
 
-/* 햇시태그 그룹 스타일 */
+/* 해시태그 그룹 스타일 */
 .tag-group {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 25px;
     justify-content: center;
-    /* 내부 태그 중앙 정렬 */
+
 }
 
 
@@ -750,7 +722,6 @@ body {
     padding: 10px 20px;
     border-radius: 3px;
     background-color: #f7f7f7;
-    /*     border: 2px solid #ebebebcc; */
     color: #303030c7;
     font-size: 14px;
     font-weight: bold;
@@ -768,7 +739,7 @@ body {
 }
 
 /* View 버튼 스타일 */
-.tag-view-button {
+/* .tag-view-button {
     display: inline-block;
     padding: 15px 40px;
     border-radius: 50px;
@@ -779,8 +750,15 @@ body {
     font-weight: bold;
     cursor: pointer;
     border: 1px solid #ccc;
-    /*  버튼 테두리 */
     transition: background-color 0.3s;
+} */
+
+.tag-view-button {
+    width: auto;
+    flex: 0 0 auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .tag-view-button:hover {
