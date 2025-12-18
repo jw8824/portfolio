@@ -484,7 +484,7 @@ body {
     font-size: 20px;
     line-height: 2;
     padding: 20px;
-    margin-bottom: 48px;
+    margin-bottom: 35px;
 
 }
 
@@ -504,16 +504,31 @@ body {
 }
 
 .tags-top a {
-    padding: 13px 35px;
-    /* border-radius: 5px; */
-    font-size: 20px;
+    /* padding: 13px 35px;
+    font-size: 18px;
     font-weight: 500;
     text-align: center;
-    flex: 0 0 auto;
+    flex: 0 0 auto; */
 
+    padding: 10px 26px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+
+    white-space: nowrap;
+    flex: 0 0 auto;
 }
 
-.tags-top .tag-process {
+/* .tags-top .tag-process {
     background-color: #ffffff;
     color: #333;
     border: 1px solid #ccc;
@@ -541,7 +556,7 @@ body {
     color: #333;
     border: 1px solid #ccc;
     border-radius: 20px;
-}
+} */
 
 /* 태그 스타일 */
 
