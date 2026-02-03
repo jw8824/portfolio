@@ -2,6 +2,7 @@
 @import url('reset.css');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 95px;
@@ -9,7 +10,7 @@ html {
 
 body {
     background-color: #032D68;
-    min-width: 1400px;
+    /* min-width: 1400px; */
     margin: 0 auto;
 }
 
@@ -496,14 +497,8 @@ body {
 
 }
 
+
 /* 버튼-프로세스,피그마,웹사이트 스타일 */
-
-/* .tags-top {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
-
-} */
 
 .tags-top {
     display: flex;
@@ -512,12 +507,6 @@ body {
 }
 
 .tags-top a {
-    /* padding: 13px 35px;
-    font-size: 18px;
-    font-weight: 500;
-    text-align: center;
-    flex: 0 0 auto; */
-
     padding: 10px 26px;
     font-size: 18px;
     font-weight: 500;
@@ -536,35 +525,6 @@ body {
     flex: 0 0 auto;
 }
 
-/* .tags-top .tag-process {
-    background-color: #ffffff;
-    color: #333;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-}
-
-.tags-top .tag-prototype {
-    background-color: #ffffff;
-    color: #333;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-
-}
-
-.tags-top .tag-website {
-    background-color: #ffffff;
-    color: #333;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-
-}
-
-.tags-top .tag-view {
-    background-color: #ffffff;
-    color: #333;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-} */
 
 /* 태그 스타일 */
 
@@ -909,4 +869,151 @@ body {
         margin: 0;
         size: auto;
     }
+}
+
+/* 태블릿 (1024px 이하) */
+@media (max-width: 1024px) {
+  .about .inner .about-content {
+    gap: 40px;
+  }
+
+  .profile-photo img {
+    width: 220px;
+  }
+}
+
+
+/* 모바일 (768px 이하) */
+@media (max-width: 768px) {
+
+  /* 레이아웃 */
+  .about {
+    padding: 80px 0;
+  }
+
+  .about .inner .about-content {
+    flex-direction: column;
+  }
+
+  .about .inner .about-content .profile-photo,
+  .about .inner .about-content .profile-details {
+    width: 100%;
+  }
+
+  .about .inner .about-content .profile-details {
+    border-left: none;
+    border-top: 2px solid #ffffff;
+    padding: 30px 20px;
+  }
+
+  /* 타이틀 */
+  .about .inner .section-title {
+    font-size: 32px;
+  }
+
+  /* 프로필 이미지 */
+  .profile-photo img {
+    width: 180px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  /* 어바웃 문장 */
+  .designer-summary {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 16px;
+  }
+
+  /* PROFILE / EDUCATION 모바일 정렬 */
+  .profile-info li,
+  .education-info li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .profile-info .label {
+    font-size: 12px;
+    opacity: 0.7;
+  }
+
+  .profile-info .data {
+    font-size: 15px;
+  }
+
+  /* 섹션 간 여백 */
+  .profile-info,
+  .education-info,
+  .skills-info {
+    margin-bottom: 40px;
+  }
+
+  /* SKILLS 아이콘 */
+  .skills-icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    justify-items: center;
+  }
+
+  .skills-icons img {
+    width: 40px;
+  }
+}
+
+/* 웹 프로젝트 반응형 */
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .web-design .fantagio,
+  .web-design .LG,
+  .web-design .busan {
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    flex-direction: column;
+  }
+
+  .web-design .project-ex {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .web-design .fantagio,
+  .web-design .LG,
+  .web-design .busan {
+    width: 100%;
+    height: auto;
+    padding: 30px 20px;
+    margin: 80px auto;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .web-design .project-ex h3 {
+    font-size: 32px;
+  }
+
+  .web-design .project-ex p,
+  .web-design .project-ex .spec p {
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 0;
+  }
+
+  .tags-top {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .tags-top a {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
 }
